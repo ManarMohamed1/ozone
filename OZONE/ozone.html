@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ozone</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <script src="https://kit.fontawesome.com/3262c2b10b.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/ozone.css">
+</head>
+<body>
+  <!--header-->
+  <section class="full-height">
+    <div class="row">
+      <div class="col">
+        <div class="container-fluid d-flex justify-content-center align-items-start">
+          <div class="img d-flex justify-content-center align-items-center">
+            <div id="overlay">
+              <figure class="w-100  d-inline-block">
+                <p class="text-center shadow d-flex justify-content-center align-items-center paragraph">START YOUR JOURNEY AT THE OZONE</p>
+                <div class="icon">
+                  <a href="ozone-logo.html" class="a-icon"><i class="fas fa-angle-double-down"></i></a>
+                </div>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Include js plugin -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.0.1/dist/gsap.min.js"></script>
+  <script src="js/ozone.js"></script>
+  <script>
+    var paragraph = document.getElementsByClassName("paragraph")
+    var icon = document.getElementsByClassName("icon")
+    gsap.from(paragraph, {duration: 2, y: 400, ease: "bounce.out", delay: 1})
+    gsap.from(icon, {duration: 2, y: -200, opacity: 0, delay: 2.5})
+  </script>
+</body>
+</html>

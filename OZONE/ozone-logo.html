@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ozone</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <script src="https://kit.fontawesome.com/3262c2b10b.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/ozone.css">
+</head>
+<body>
+    <!--header-->
+    <section class="full-height" id="ozono-logo">
+      <div class="row">
+        <div class="col">
+          <div class="container-fluid d-flex justify-content-center align-items-start">
+            <div class="img d-flex justify-content-center align-items-center">
+              <div id="overlay">
+                  <div class="svg-img d-flex justify-content-center align-items-center h-100 flex-column">
+                    <img src="images/74467184_454065855244697_4463990283620581376_n.png" class="mt-2 img-1" alt="">
+                    <p class="logo-p">The Biggist co-working Space in the Delta</p>
+                    <svg class="" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 287 53"><defs><style>.cls-1{fill:#5a6473;}.cls-2{fill:#f25e6b;}.cls-3,.cls-4{fill:none;stroke-miterlimit:10;}.cls-3{stroke:#f25e6b;}.cls-4{stroke:#5a6473;}</style></defs><title>2-palls</title><g id="right-circle"><circle class="shadow-sm cls-1" cx="260.5" cy="26.5" r="26"/><path class="cls-1" d="M268.5,12A25.5,25.5,0,1,1,243,37.5,25.53,25.53,0,0,1,268.5,12m0-1A26.5,26.5,0,1,0,295,37.5,26.49,26.49,0,0,0,268.5,11Z" transform="translate(-8 -11)"/></g><g id="left-circle"><circle class="shadow-sm cls-2" cx="26.5" cy="26.5" r="26"/><path class="cls-2" d="M34.5,12A25.5,25.5,0,1,1,9,37.5,25.53,25.53,0,0,1,34.5,12m0-1A26.5,26.5,0,1,0,61,37.5,26.49,26.49,0,0,0,34.5,11Z" transform="translate(-8 -11)"/></g><g id="right-line"><line class="cls-3" x1="153" y1="28.5" x2="228" y2="28.5"/><line class="cls-2" x1="153" y1="28.5" x2="228" y2="28.5"/></g><g id="left-line"><line class="cls-4" x1="60" y1="28.5" x2="135" y2="28.5"/><line class="cls-1" x1="60" y1="28.5" x2="135" y2="28.5"/></g></svg>
+                    <img class="img-2" src="images/OZONE.svg" alt="">
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Include js plugin -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.0.1/dist/gsap.min.js"></script>
+  <script>
+    var rCircle = document.getElementById("right-circle"),
+        lCircle = document.getElementById("left-circle"),
+        rLine = document.getElementById("right-line"),
+        lLine = document.getElementById("left-line")
+
+    gsap.from(rCircle, {duration: 2, x: -100, opacity: 0, delay: 1})
+    gsap.from(lCircle, {duration: 2, x: 100, opacity: 0, delay: 1})
+    gsap.to([rLine,lLine], {duration: 2, scaleX: 1, opacity:1, delay: 2, width: "75px"});
+    // gsap.to(lLine, {duration: 2, scaleX: 1, opacity:1, delay: 2, width: "75px"})
+    // TweenMax.fromTo(".svg-img .img-1", 2, {opacity:0, y: 300}, {opacity:1, y:0, delay: 3})
+    gsap.fromTo([".svg-img .img-1", ".svg-img .img-2"], {opacity:0, y: 250}, {duration: 3, opacity: 1, scaleY: 1, y:0, delay: 3, ease: "slow(0.7, 0.7, false)"})
+    gsap.fromTo([".svg-img .img-2", ".svg-img .img-2"], {opacity:0, y: -250}, {duration: 3, opacity: 1, scaleY: 1, y:0, delay: 3, ease: "slow(0.7, 0.7, false)"})
+    gsap.to("#Layer_1", {duration: 2, x: 1000, delay: 6})
+    gsap.fromTo(".logo-p", {x: -1100},{duration: 2, delay: 6.5, x: 0, display: "block", ease: "slow(0.7, 0.7, false)"})
+  </script>
+
+</body>
+</html>
